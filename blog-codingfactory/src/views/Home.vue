@@ -5,18 +5,18 @@
       src="/media/cc0-images/grapefruit-slice-332-332.jpg"
       alt="Grapefruit slice atop a pile of other slices">
     </div>
-    <list-post></list-post>
+    <single-post></single-post>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import ListPost from '@/components/List-post.vue'
+import SinglePost from '@/components/Single-post.vue'
 
 export default {
   name: 'Home',
   components: {
-    ListPost
+    SinglePost
   }
 }
 </script>

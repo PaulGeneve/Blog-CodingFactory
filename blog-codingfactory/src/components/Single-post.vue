@@ -1,34 +1,32 @@
 <template>
   <div class="home">
+    
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import axios from 'axios'
+import Vue from 'vue'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios,axios)
 
 export default {
   name: 'single-post',
   
-    data(){
-    return{
-      auteur:'',
-      titre:'',
-      description:'',
-      link:'',
-      image:'',
-      date:'',
-      contenu:''
+  computed:{
+    getArticles(){
+      return this.$store.state.articles
     }
   },
-  methods: {
-    getNewsData(){
-       axios.get('http://api.fakecompany.life:30002/news')
+  methods:{
+    getArticleData(){
+      axios.get('https://newsdata.io/api/1/news?apikey=pub_1758053ff5b5f04708467f6785c94008f9c8')
       .then(result => {
           console.log(result)
       })
     }
   }
-
 }
 </script>

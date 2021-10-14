@@ -8,6 +8,19 @@
   </div>
 </template>
 
+<script>
+
+export default {
+  components:{
+
+  },
+  beforeCreate(){
+    this.$store.commit('getApi')
+  }
+}
+</script>
+
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
