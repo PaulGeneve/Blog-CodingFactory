@@ -1,8 +1,5 @@
 <template>
   <div class="home">
-<<<<<<< Updated upstream
-    
-=======
     <div class="grille" style="width: 18rem;">
     <img :src = "image" class="card-img-top" alt="...">
         <div class="card-body">
@@ -13,13 +10,12 @@
         <a :href = "link" class="btn btn-primary">Voir</a>
         </div>
      </div>
->>>>>>> Stashed changes
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-<<<<<<< Updated upstream
+
 import axios from 'axios'
 import Vue from 'vue'
 import VueAxios from 'vue-axios'
@@ -42,7 +38,7 @@ export default {
       })
     }
   }
-=======
+}
 </script>
 
 <style>
@@ -53,7 +49,6 @@ export default {
   grid-gap: 10px;
   margin-top: 30px;
   border: solid;
->>>>>>> Stashed changes
 }
 h1{
   text-align: center;

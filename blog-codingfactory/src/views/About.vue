@@ -17,6 +17,8 @@
          Culpa similique blanditiis nisi aliquid temporibus.</p>
     </div>
 
+
+
   </div>
 </template>
  
@@ -50,7 +52,7 @@ h1 {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: 8%
+  margin-top: 5%
 }
 
 </style>
