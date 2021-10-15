@@ -20,6 +20,19 @@
         </div>
 </template>
 
+<script>
+
+export default {
+  components:{
+
+  },
+  beforeCreate(){
+    this.$store.commit('getApi')
+  }
+}
+</script>
+
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 

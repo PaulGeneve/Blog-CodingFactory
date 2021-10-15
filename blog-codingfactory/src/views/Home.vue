@@ -6,12 +6,12 @@
 
 <script>
 // @ is an alias to /src
-import ListPost from '@/components/List-post.vue'
+import SinglePost from '@/components/Single-post.vue'
 
 export default {
   name: 'Home',
   components: {
-    ListPost
+    SinglePost
   }
 }
 </script>
