@@ -1,31 +1,24 @@
 <template>
   <div class="home">
 
-    <single-post></single-post>
+    <Article-List></Article-List>
 
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import SinglePost from '@/components/Single-post.vue'
+import ArticleList from '@/components/ArticleList.vue'
 
 export default {
   name: 'Home',
   components: {
-    SinglePost
+    ArticleList
   }
 }
 </script>
 
 <style>
 
-.grill{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 400px);
-  grid-gap: 30px;
-  justify-content: center;
-  padding-bottom: 10%;
-}
 
 </style>

@@ -6,7 +6,10 @@
                     <div class="nav-link">
                         <router-link to="/">Home</router-link>
                         | 
+                        <router-link to="/admin">Admin</router-link>
+                        |
                         <router-link to="/about">About</router-link>
+
                     </div>
             </div>
     </div> 
@@ -38,7 +41,7 @@ export default {
 }
 
 #nav {
-    background-color: lightgray;
+    background-color: rgb(233, 233, 233);
 }
 #nav a {
     font-weight: bold;
@@ -69,7 +72,7 @@ h1 {
 .navTitleFont {
     font-family: 'Roboto Condensed', sans-serif !important;
     font-size: 2em;
-    padding-top: 1%;
+    padding-top: 4%;
     padding-left: 3%;
     }
 

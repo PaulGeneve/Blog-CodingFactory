@@ -25,7 +25,7 @@ export default new Vuex.Store({
         result.data.results.forEach(element => {
           let articles = {
             'title': element.title,
-            'author': element.creator,
+            'source': element.source_id,
             'description': element.description,
             'content': element.content,
             'date': element.pubDate,
@@ -33,7 +33,7 @@ export default new Vuex.Store({
             'link': element.link
           }
           context.commit('addArticle', articles)
-          console.log(result.data)
+          console.log(element)
         })
       })
     }

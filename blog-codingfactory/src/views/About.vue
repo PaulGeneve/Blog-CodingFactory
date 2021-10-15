@@ -45,20 +45,14 @@ h1 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
-
 .text-about{
-  text-align: center;
-  color: #22303f;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 5%
+  text-justify: inter-word;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  margin: 0 10% 0 10%;
 }
 
-.card-img{
-  margin-top: 5%;
-  width: 20%;
-  height: 20%;
-}
+
 </style>
 
