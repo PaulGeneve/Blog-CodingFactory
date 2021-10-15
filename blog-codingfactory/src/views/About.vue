@@ -17,7 +17,7 @@
          Culpa similique blanditiis nisi aliquid temporibus.</p>
     </div>
 
-
+    <img src = "../assets/logo.png" class="card-img" alt="...">
 
   </div>
 </template>
@@ -55,5 +55,10 @@ h1 {
   margin-top: 5%
 }
 
+.card-img{
+  margin-top: 5%;
+  width: 20%;
+  height: 20%;
+}
 </style>
 

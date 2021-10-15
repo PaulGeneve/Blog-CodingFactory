@@ -1,16 +1,17 @@
 <template>
-  <div class="home">
-    <div class="grille" style="width: 18rem;">
-    <img :src = "image" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h6 class="card-title">{{ auteur }}</h6>
-              <h5 class="card-subtitle mb-2 text-muted">{{ titre }}</h5>
-            <p class="card-text">{{ description }}</p>
-            <p class ="card-date"> {{ date }} </p>
-        <a :href = "link" class="btn btn-primary">Voir</a>
-        </div>
+    <div class="card" style="width: 18rem;">
+      <img src = "../assets/logo.png" class="card-img" alt="...">
+          <div class="card-body">
+              <h3 class="card-title">Titre</h3>
+                <h4 class="card-auteur">auteur</h4>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, 
+                quod quidem consequuntur eaque ullam id iusto !
+              </p>
+              <p class ="card-date">12/10/2021</p>
+          </div>
+        <a href = "link" class="button">Voir</a>
      </div>
-  </div>
 </template>
 
 <script>
@@ -43,50 +44,49 @@ export default {
 
 <style>
 
-.grille{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  grid-gap: 10px;
-  margin-top: 30px;
-  border: solid;
-}
-h1{
-  text-align: center;
-  font-size: larger;
-    
+.card{
+  margin-left: 10%;
+  padding-top: 20%;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #0d6efd;
-    border-color: #0d6efd;
-}
-
-.btn-primary {
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
+  .button {
+    border: none;
+    display: block;
     text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: #42b983;
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
-}
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #eeeeee;
+    font-weight: 110;
+    font-size: 20px;
+    background-color: #153f00;
+      padding: 1px 10px;
+      margin: 0 auto;
+      }
+      .button span {
+      position: relative; 
+      z-index: 1;
+      }
+      .button:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 290%;
+      width: 140%;
+      background: #52b71f;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .3s ease-in-out;
+      -webkit-transform: translateX(-100%) translateY(-45%) rotate(45deg);
+      transform: translateX(-100%) translateY(-45%) rotate(45deg);
+      }
+      .button:hover:after {
+      -webkit-transform: translateX(-9%) translateY(-210%) rotate(45deg);
+      transform: translateX(-9%) translateY(-210%) rotate(45deg);
+      }
 
-.btn-primary:hover {
-    background-color: #42b983;
-}
 
-.btn-primary:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                inset 2px 2px 3px rgba(0, 0, 0, .6);
-}
 
 </style>

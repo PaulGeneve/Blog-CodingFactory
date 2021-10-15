@@ -1,6 +1,13 @@
 <template>
   <div class="home">
-    <list-post></list-post>
+    <div class='grill'>
+    <single-post></single-post>
+    <single-post></single-post>
+    <single-post></single-post>
+    <single-post></single-post>
+    <single-post></single-post>
+    <single-post></single-post>
+    </div>
   </div>
 </template>
 
@@ -15,3 +22,15 @@ export default {
   }
 }
 </script>
+
+<style>
+
+.grill{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-gap: 30px;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+
+</style>
