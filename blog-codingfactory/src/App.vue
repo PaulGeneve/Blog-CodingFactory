@@ -3,16 +3,23 @@
       <div id="nav">
             <div class="navbar">
                 <h1 class="navTitleFont">BLOGGING FACTORY</h1>
-                    <div class="nav-link">
-                        <router-link to="/">Home</router-link>
-                        | 
-                        <router-link to="/admin">Admin</router-link>
-                        |
-                        <router-link to="/about">About</router-link>
-
+                        <div class="nav-link">
+                            <a href="#">
+                                <router-link to="/">Home</router-link>
+                            </a>
+                            <a> 
+                                | 
+                            </a>
+                            <a href="#">
+                                <router-link to="/about">About</router-link>
+                            </a>
+                                |
+                             <a href="#">
+                                <router-link to="/admin">Admin</router-link>
+                            </a>      
+                        </div>
                     </div>
             </div>
-    </div> 
       <router-view/>              
     </div>
 </template>
