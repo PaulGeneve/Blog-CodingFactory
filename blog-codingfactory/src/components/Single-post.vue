@@ -1,16 +1,18 @@
 <template>
+
     <div class="card" style="width: 18rem;">
+      <div v-for="(item, index) in getArticles" :key="index">
       <img src = "../assets/logo.png" class="card-img" alt="...">
           <div class="card-body">
-              <h3 class="card-title">Titre</h3>
-                <h4 class="card-auteur">auteur</h4>
-              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, 
-                quod quidem consequuntur eaque ullam id iusto !
-              </p>
-              <p class ="card-date">12/10/2021</p>
+              <h3 class="card-title">{{ item.title }}</h3>
+                <h4 class="card-auteur"> {{ item.author }} </h4>
+              <p class="card-text"> {{ item.content }} </p>
+              <p class ="card-date"> {{ item.date }} </p>
           </div>
-        <a href = "link" class="button">Voir</a>
+        <a href= "link" class="button">Voir</a>
+      </div>
+      
+
      </div>
 </template>
 
@@ -28,17 +30,15 @@ export default {
   
   computed:{
     getArticles(){
-      return this.$store.state.articles
+      return this.$store.getters.getArticles
     }
   },
-  methods:{
-    getArticleData(){
-      axios.get('https://newsdata.io/api/1/news?apikey=pub_1758053ff5b5f04708467f6785c94008f9c8')
-      .then(result => {
-          console.log(result)
-      })
-    }
+  mounted() {
+    console.log(this.getArticles);
+    this.getArticles
   }
+
+
 }
 </script>
 
@@ -86,7 +86,5 @@ export default {
       -webkit-transform: translateX(-9%) translateY(-210%) rotate(45deg);
       transform: translateX(-9%) translateY(-210%) rotate(45deg);
       }
-
-
 
 </style>

@@ -1,34 +1,27 @@
 <template>
     <div id="app">
-        <div id="nav">
+      <div id="nav">
             <div class="navbar">
                 <h1 class="navTitleFont">BLOGGING FACTORY</h1>
-                        <div class="nav-link">
-                            <a href="#">
-                                <router-link to="/">Home</router-link>
-                            </a>
-                            <a> 
-                                | 
-                            </a>
-                            <a href="#">
-                                <router-link to="/about">About</router-link>
-                            </a>
-                        </div>
+                    <div class="nav-link">
+                        <router-link to="/">Home</router-link>
+                        | 
+                        <router-link to="/about">About</router-link>
                     </div>
-            </div> 
-            <router-view/>              
-        </div>
+            </div>
+    </div> 
+      <router-view/>              
+    </div>
 </template>
 
 <script>
-
 export default {
-  components:{
-
-  },
-  beforeCreate(){
-    this.$store.commit('getApi')
+  
+  mounted() {
+      this.$store.dispatch('getApi')
   }
+  
+  
 }
 </script>
 
@@ -65,6 +58,7 @@ h1 {
 }
 
 .navbar {
+    height: 100px;
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -75,13 +69,15 @@ h1 {
 .navTitleFont {
     font-family: 'Roboto Condensed', sans-serif !important;
     font-size: 2em;
+    padding-top: 1%;
     padding-left: 3%;
     }
 
 .nav-link {
     text-align: center;
-    padding-top: 1%;
+    padding-top: 3%;
     padding-right: 3%;
     height: fit-content;
+    vertical-align: middle;
 }
 </style>

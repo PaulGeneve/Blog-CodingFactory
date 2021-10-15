@@ -1,13 +1,8 @@
 <template>
   <div class="home">
-    <div class='grill'>
+
     <single-post></single-post>
-    <single-post></single-post>
-    <single-post></single-post>
-    <single-post></single-post>
-    <single-post></single-post>
-    <single-post></single-post>
-    </div>
+
   </div>
 </template>
 
